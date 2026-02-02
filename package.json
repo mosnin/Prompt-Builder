@@ -1,14 +1,11 @@
 {
   "name": "ai-prompt-generator",
-  "version": "1.0.0",
-  "description": "Free AI Prompt Generator - Build better prompts for ChatGPT, GPT-5, and other AI models",
+  "version": "2.0.0",
+  "description": "Free AI Prompt Generator - Build better prompts for ChatGPT, GPT-5, and other AI models. No API key required.",
   "private": true,
   "scripts": {
     "dev": "vercel dev",
     "build": "echo 'Static site - no build step required'",
     "deploy": "vercel --prod"
-  },
-  "dependencies": {
-    "openai": "^4.73.0"
   }
 }
