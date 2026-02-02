@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Business Idea Prompt Generator | AI Startup Ideas</title>
+  <meta name="description" content="Generate AI prompts for profitable business ideas. Our free business idea generator helps entrepreneurs find low-cost startup opportunities.">
+  <meta name="keywords" content="business idea prompt generator, AI business ideas, startup idea generator, ChatGPT business prompt, side hustle ideas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/business-idea-prompt-generator.html">
+  <meta property="og:title" content="Free Business Idea Prompt Generator | AI Startup Ideas">
+  <meta property="og:description" content="Generate AI prompts for profitable business ideas. Our free business idea generator helps entrepreneurs find low-cost startup opportunities.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/business-idea-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link active">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Business Idea</span> Prompt Generator</h1>
+          <p>Generate AI prompts that uncover profitable business opportunities in any industry.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Business Idea Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to discover your next business opportunity.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="industryNiche">Industry or Niche <span class="required">*</span></label>
+              <input type="text" id="industryNiche" name="industryNiche" required placeholder="e.g., Health &amp; wellness, SaaS, e-commerce">
+            </div>
+            <div class="form-group">
+              <label for="budgetRange">Budget Range</label>
+              <select id="budgetRange" name="budgetRange">
+                <option value="Under $100">Under $100</option>
+                <option value="Under $500">Under $500</option>
+                <option value="Under $1,000">Under $1,000</option>
+                <option value="Under $5,000">Under $5,000</option>
+                <option value="$5,000+">$5,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="yourSkills">Your Skills</label>
+              <textarea id="yourSkills" name="yourSkills" rows="3" placeholder="e.g., Web development, marketing, writing, graphic design"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="businessModel">Business Model</label>
+              <select id="businessModel" name="businessModel">
+                <option value="Online Only">Online Only</option>
+                <option value="Offline/Local">Offline/Local</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Passive Income">Passive Income</option>
+                <option value="Freelance/Service">Freelance/Service</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="targetMarket">Target Market</label>
+              <input type="text" id="targetMarket" name="targetMarket" placeholder="e.g., Small business owners, college students, parents">
+            </div>
+            <div class="form-group">
+              <label for="numIdeas">Number of Ideas</label>
+              <select id="numIdeas" name="numIdeas">
+                <option value="3">3 ideas</option>
+                <option value="5">5 ideas</option>
+                <option value="10">10 ideas</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>AI is accelerating entrepreneurship in unprecedented ways. What once required weeks of market research, competitive analysis, and brainstorming can now be accomplished in minutes with the right AI prompt. Modern AI tools can analyze market trends, identify underserved niches, and generate business concepts that combine proven revenue models with emerging opportunities. For aspiring entrepreneurs, this means lower barriers to entry and faster paths from idea to execution.</p>
+            <p>Validating a business idea before investing significant time and money is one of the most critical steps in entrepreneurship. AI can help you stress-test concepts by identifying potential challenges, estimating market size, and suggesting lean validation strategies. However, no AI can replace the insights gained from actually talking to potential customers. Use AI-generated ideas as a starting point, then validate through customer interviews, landing page tests, and minimum viable products.</p>
+            <p>The most successful businesses start lean — with minimal investment and a focus on solving a real problem for a specific audience. Whether you have $100 or $5,000 to invest, the key is to choose an idea that matches your skills, budget, and lifestyle goals. Our business idea prompt generator helps you find opportunities that align with your unique situation, increasing your chances of building something sustainable and profitable from day one.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can AI really generate good business ideas?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>AI excels at combining patterns across industries to surface unique business opportunities. It can analyze market gaps, trending niches, and proven business models to generate ideas you might not have considered. Use AI for brainstorming and initial concept development, then validate with real market research, customer conversations, and competitive analysis before committing resources.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What's the best low-cost business to start?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Service businesses like consulting, freelancing, and coaching have the lowest startup costs since they primarily require your time and expertise. Digital products such as online courses, templates, and ebooks scale best because they have near-zero marginal costs. The best choice depends on your skills, available time, and long-term goals — our generator helps match ideas to your specific situation.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How do I validate a business idea?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Start by talking to potential customers to understand their pain points and willingness to pay. Check search volume using tools like Google Trends to gauge demand. Analyze competitors to see if the market is viable but not oversaturated. Finally, test with a minimum viable product — a simple landing page, pre-sale, or prototype — before building the full solution.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const industry = document.getElementById('industryNiche').value.trim();
+      const budget = document.getElementById('budgetRange').value;
+      const skills = document.getElementById('yourSkills').value.trim();
+      const model = document.getElementById('businessModel').value;
+      const targetMarket = document.getElementById('targetMarket').value.trim();
+      const numIdeas = document.getElementById('numIdeas').value;
+
+      let prompt = `You are a serial entrepreneur and business strategist. Generate ${numIdeas} profitable business ideas in the ${industry} niche with a startup budget under ${budget}.`;
+
+      if (skills) {
+        prompt += ` Leverage these skills: ${skills}.`;
+      }
+
+      prompt += ` Business model preference: ${model}.`;
+
+      if (targetMarket) {
+        prompt += ` Focus on serving this market: ${targetMarket}.`;
+      }
+
+      prompt += ` For each idea provide: 1) Business name suggestion, 2) One-line pitch, 3) Problem it solves, 4) Revenue model, 5) Estimated startup cost, 6) First 3 steps to launch. Prioritize ideas that can generate revenue within 30-90 days. Focus on validated market demand, not just novelty.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

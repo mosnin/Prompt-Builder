@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Cover Letter Prompt Generator | AI Cover Letter Builder</title>
+  <meta name="description" content="Generate AI prompts to write compelling cover letters. Our free cover letter prompt generator creates tailored prompts for any job application.">
+  <meta name="keywords" content="cover letter prompt generator, AI cover letter, ChatGPT cover letter prompt, cover letter builder">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/cover-letter-prompt-generator.html">
+  <meta property="og:title" content="Free Cover Letter Prompt Generator | AI Cover Letter Builder">
+  <meta property="og:description" content="Generate AI prompts to write compelling cover letters. Our free cover letter prompt generator creates tailored prompts for any job application.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/cover-letter-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link active">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Cover Letter Prompt Generator</span></h1>
+          <p>Build AI prompts that create tailored, compelling cover letters for any job application.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Cover Letter Prompt</h2>
+          <p class="subtitle">Enter your details below and we'll generate a prompt that produces a polished, personalized cover letter.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="jobTitle">Job Title <span class="required">*</span></label>
+              <input type="text" id="jobTitle" name="jobTitle" required placeholder="e.g., Marketing Manager">
+            </div>
+            <div class="form-group">
+              <label for="companyName">Company Name <span class="required">*</span></label>
+              <input type="text" id="companyName" name="companyName" required placeholder="e.g., Google">
+            </div>
+            <div class="form-group">
+              <label for="companyCulture">Company Culture</label>
+              <select id="companyCulture" name="companyCulture">
+                <option value="Corporate/Formal">Corporate/Formal</option>
+                <option value="Startup/Casual">Startup/Casual</option>
+                <option value="Creative Agency">Creative Agency</option>
+                <option value="Government/Institutional">Government/Institutional</option>
+                <option value="Non-profit">Non-profit</option>
+                <option value="Unknown">Unknown</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="keyAchievements">Your Key Achievements</label>
+              <textarea id="keyAchievements" name="keyAchievements" rows="3" placeholder="e.g., Increased sales by 40%, led team of 12, launched new product line"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="whyCompany">Why This Company? (optional)</label>
+              <input type="text" id="whyCompany" name="whyCompany" placeholder="e.g., Passionate about their mission in clean energy">
+            </div>
+            <div class="form-group">
+              <label for="tone">Tone</label>
+              <select id="tone" name="tone">
+                <option value="Professional &amp; Formal">Professional &amp; Formal</option>
+                <option value="Confident &amp; Direct">Confident &amp; Direct</option>
+                <option value="Enthusiastic &amp; Passionate">Enthusiastic &amp; Passionate</option>
+                <option value="Warm &amp; Personable">Warm &amp; Personable</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>A well-crafted cover letter can be the difference between landing an interview and getting lost in a pile of applications. Unlike a resume, which lists your qualifications, a cover letter tells your story — it explains why you're the right fit for both the role and the company. AI tools can help you write a compelling narrative quickly, but the key is giving the AI the right instructions. That's where our cover letter prompt generator comes in.</p>
+            <p>Personalization is the single most important factor in a successful cover letter. Hiring managers can immediately spot a generic, copy-pasted letter, and it signals a lack of genuine interest. By including specific details about the company, the role, and your relevant achievements, you demonstrate that you've done your research and are seriously invested in the opportunity. Our tool ensures your AI prompt captures all of these personalized details.</p>
+            <p>Common cover letter mistakes include opening with "I am writing to apply for..." (which is bland and forgettable), being too long (keep it under one page), and failing to quantify your impact. The prompts generated by this tool specifically instruct AI to avoid these pitfalls — starting with a compelling hook, including measurable results, and ending with a confident call to action that leaves a lasting impression.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How do I write a cover letter with AI?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Simply fill in the form above with your job details, target company, and key achievements. The tool generates an optimized prompt that you paste into any AI chatbot like ChatGPT, Claude, or Gemini. The AI will then produce a tailored, professional cover letter based on the detailed instructions in the prompt. Review the output, make any personal adjustments, and you're ready to apply.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Should I customize for every application?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, absolutely. Every job posting and company is different, and a customized cover letter dramatically increases your chances of getting noticed. With this tool, customization takes just a few minutes — update the company name, job title, and relevant achievements, generate a new prompt, and you'll have a fresh, personalized cover letter for each application.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How long should a cover letter be?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>A cover letter should be concise and fit on a single page — typically 250 to 400 words or 3 to 4 paragraphs. Hiring managers spend only a few seconds scanning each letter, so every sentence should add value. Our generated prompts instruct the AI to keep the letter under one page while including all the essential elements: a strong opening, evidence of your value, and a clear call to action.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const jobTitle = document.getElementById('jobTitle').value.trim();
+      const companyName = document.getElementById('companyName').value.trim();
+      const companyCulture = document.getElementById('companyCulture').value;
+      const keyAchievements = document.getElementById('keyAchievements').value.trim();
+      const whyCompany = document.getElementById('whyCompany').value.trim();
+      const tone = document.getElementById('tone').value;
+
+      let prompt = `You are a career coach and professional writer specializing in cover letters. Write a tailored cover letter for a ${jobTitle} role at ${companyName}. Match the tone to the ${companyCulture} culture — use a ${tone} tone.`;
+
+      if (keyAchievements) {
+        prompt += ` Highlight these key achievements: ${keyAchievements}.`;
+      }
+
+      if (whyCompany) {
+        prompt += ` Emphasize genuine interest in the company because: ${whyCompany}.`;
+      }
+
+      prompt += ` The cover letter should: open with a compelling hook (not 'I am writing to apply'), demonstrate specific value with quantified results, show knowledge of the company, and end with a confident call to action. Keep it under one page.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

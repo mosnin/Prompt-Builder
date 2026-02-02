@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Habit Builder Prompt Generator | AI Habit Planner</title>
+  <meta name="description" content="Generate AI prompts for building lasting habits. Our free habit builder generator creates personalized habit formation plans with accountability.">
+  <meta name="keywords" content="habit builder prompt generator, AI habit planner, habit formation prompt, ChatGPT habit builder, habit tracker prompt">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/habit-builder-prompt-generator.html">
+  <meta property="og:title" content="Free Habit Builder Prompt Generator | AI Habit Planner">
+  <meta property="og:description" content="Generate AI prompts for building lasting habits. Our free habit builder generator creates personalized habit formation plans with accountability.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/habit-builder-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link active">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Habit Builder</span> Prompt Generator</h1>
+          <p>Create AI prompts that design personalized plans to build lasting, positive habits.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Habit Builder Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to create your personalized habit formation plan.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="habit">Habit You Want to Build <span class="required">*</span></label>
+              <textarea id="habit" name="habit" rows="3" required placeholder="e.g., Exercise for 30 minutes every morning"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="currentFrequency">Current Frequency</label>
+              <select id="currentFrequency" name="currentFrequency">
+                <option value="Never done this before">Never done this before</option>
+                <option value="Occasionally (once a week or less)">Occasionally (once a week or less)</option>
+                <option value="Sometimes (2-3 times a week)">Sometimes (2-3 times a week)</option>
+                <option value="Inconsistently (off and on)">Inconsistently (off and on)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="availableTime">Available Time per Day</label>
+              <select id="availableTime" name="availableTime">
+                <option value="5 minutes">5 minutes</option>
+                <option value="15 minutes">15 minutes</option>
+                <option value="30 minutes">30 minutes</option>
+                <option value="1 hour">1 hour</option>
+                <option value="More than 1 hour">More than 1 hour</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mainObstacle">Main Obstacle (optional)</label>
+              <textarea id="mainObstacle" name="mainObstacle" rows="3" placeholder="e.g., I lose motivation after a week, mornings are too rushed"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="habitTimeframe">Timeframe</label>
+              <select id="habitTimeframe" name="habitTimeframe">
+                <option value="21 days (kickstart)">21 days (kickstart)</option>
+                <option value="30 days (challenge)">30 days (challenge)</option>
+                <option value="66 days (science-backed)">66 days (science-backed)</option>
+                <option value="90 days (deep integration)">90 days (deep integration)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="accountability">Accountability Method</label>
+              <select id="accountability" name="accountability">
+                <option value="Self-tracking (journal/app)">Self-tracking (journal/app)</option>
+                <option value="Accountability partner">Accountability partner</option>
+                <option value="Public commitment">Public commitment</option>
+                <option value="Reward system">Reward system</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>The science of habit formation has evolved significantly beyond the popular "21 days to form a habit" myth. Research from University College London found that it actually takes an average of 66 days for a new behavior to become automatic, with a range of 18 to 254 days depending on the complexity of the habit and the individual. Understanding this timeline is crucial — many people give up after three weeks thinking they've failed, when in reality they're just getting started.</p>
+            <p>At the core of every habit is what researchers call the habit loop: a cue that triggers the behavior, the routine itself, and a reward that reinforces it. James Clear's "Atomic Habits" framework builds on this by emphasizing four laws of behavior change: make it obvious (cue), make it attractive (craving), make it easy (response), and make it satisfying (reward). Our prompts incorporate these principles to generate plans that work with your brain's natural reward system rather than relying on willpower alone.</p>
+            <p>AI can serve as a virtual habit coach by helping you design an environment and routine that makes your desired habit nearly automatic. From suggesting habit stacks (attaching new habits to existing routines) to creating graduated difficulty plans that prevent burnout, the AI-generated plans from this tool use proven behavioral psychology principles. The key is starting small — BJ Fogg's "Tiny Habits" research shows that beginning with a 2-minute version of your habit and gradually scaling up is far more effective than trying to go all-in from day one.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How long does it take to form a habit?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Research shows it takes 18-254 days depending on the complexity of the habit and individual factors, with 66 days being the average. Simple habits like drinking a glass of water in the morning form faster, while complex habits like a full exercise routine take longer. Our plans account for this by using a phased approach that gradually builds intensity over time.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What if I miss a day?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>The plan includes a "never miss twice" rule. One missed day doesn't break a habit — research shows that occasional misses have no measurable impact on long-term habit formation. However, two missed days in a row starts forming a new pattern of not doing the habit. The key is to get back on track immediately, even if it's just the tiny 2-minute version of the habit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can this help break bad habits too?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes. The most effective way to break a bad habit is to replace it with a positive alternative. Frame your input as building the replacement habit — for example, "drink water when I crave soda" or "take a 5-minute walk when I feel the urge to scroll social media." Include the bad habit you're replacing in the obstacle field so the AI can address the specific triggers and cravings involved.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const habit = document.getElementById('habit').value.trim();
+      const currentFrequency = document.getElementById('currentFrequency').value;
+      const availableTime = document.getElementById('availableTime').value;
+      const mainObstacle = document.getElementById('mainObstacle').value.trim();
+      const habitTimeframe = document.getElementById('habitTimeframe').value;
+      const accountability = document.getElementById('accountability').value;
+
+      let prompt = `You are a behavioral psychologist and habit formation expert. Design a ${habitTimeframe} habit-building plan for: ${habit}. Current frequency: ${currentFrequency}. Available time per day: ${availableTime}. Accountability method: ${accountability}.`;
+
+      if (mainObstacle) {
+        prompt += ` The main obstacle is: ${mainObstacle}. Address this directly in the plan.`;
+      }
+
+      prompt += ` Create a phased plan using proven habit science: Phase 1 (Week 1-2): Start with a tiny version of the habit (2-minute rule). Focus on consistency over intensity. Phase 2 (Week 3-4): Gradually increase duration/intensity. Phase 3 (Remaining weeks): Reach full target habit. Include: 1) Specific habit stacking suggestion (attach to an existing routine), 2) Environment design tips to make the habit easier, 3) Implementation intention: 'I will [habit] at [time] in [location] after [existing habit]', 4) How to handle missed days (never miss twice rule), 5) Progress tracking method matching the chosen accountability approach, 6) Weekly check-in questions. Base advice on research from James Clear (Atomic Habits), BJ Fogg (Tiny Habits), and behavioral psychology.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

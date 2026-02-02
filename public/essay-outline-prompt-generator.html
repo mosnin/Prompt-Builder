@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Essay Outline Prompt Generator | AI Essay Planner</title>
+  <meta name="description" content="Generate AI prompts to create structured essay outlines. Our free essay outline generator helps students and writers plan essays quickly.">
+  <meta name="keywords" content="essay outline prompt generator, AI essay planner, essay outline builder, ChatGPT essay outline">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/essay-outline-prompt-generator.html">
+  <meta property="og:title" content="Free Essay Outline Prompt Generator | AI Essay Planner">
+  <meta property="og:description" content="Generate AI prompts to create structured essay outlines. Our free essay outline generator helps students and writers plan essays quickly.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/essay-outline-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link active">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Essay Outline</span> Prompt Generator</h1>
+          <p>Generate AI prompts that create structured, well-organized essay outlines on any topic.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Essay Outline Prompt</h2>
+          <p class="subtitle">Enter your essay details and we'll generate a prompt that produces a clear, structured outline ready to write from.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="essayTopic">Essay Topic or Thesis <span class="required">*</span></label>
+              <textarea id="essayTopic" name="essayTopic" rows="3" required placeholder="e.g., The impact of social media on mental health among teenagers"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="essayType">Essay Type</label>
+              <select id="essayType" name="essayType">
+                <option value="Argumentative">Argumentative</option>
+                <option value="Expository">Expository</option>
+                <option value="Persuasive">Persuasive</option>
+                <option value="Compare &amp; Contrast">Compare &amp; Contrast</option>
+                <option value="Narrative">Narrative</option>
+                <option value="Analytical">Analytical</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="academicLevel">Academic Level</label>
+              <select id="academicLevel" name="academicLevel">
+                <option value="High School">High School</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduate/Masters">Graduate/Masters</option>
+                <option value="Doctoral">Doctoral</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mainPoints">Number of Main Points</label>
+              <select id="mainPoints" name="mainPoints">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="counterArguments">Include Counter-Arguments?</label>
+              <select id="counterArguments" name="counterArguments">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="wordCount">Desired Word Count</label>
+              <select id="wordCount" name="wordCount">
+                <option value="500 words">500 words</option>
+                <option value="1000 words">1000 words</option>
+                <option value="1500 words">1500 words</option>
+                <option value="2000 words">2000 words</option>
+                <option value="2500+ words">2500+ words</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Every great essay starts with a solid outline. Outlining before you write forces you to organize your thoughts, identify the strongest arguments, and create a logical flow from introduction to conclusion. Without an outline, writers often struggle with structure, go off on tangents, or realize halfway through that their argument doesn't hold together. An outline is your roadmap — it saves time and produces better writing.</p>
+            <p>AI is an exceptional tool for essay planning because it can quickly generate multiple structural approaches to a topic. By providing your thesis, essay type, and academic level, you enable the AI to produce an outline that matches the expectations of your audience and assignment. Whether you're writing a high school persuasive essay or a doctoral analytical paper, the structure and depth of the outline will be appropriately calibrated.</p>
+            <p>Once you have your AI-generated outline, the real work begins: turning it into a compelling essay. Use the outline as a skeleton and fill in each section with your own research, analysis, and voice. The outline gives you topic sentences, suggested evidence, and transitions — you provide the critical thinking and personal insight that make the essay truly yours. This combination of AI efficiency and human creativity is the most effective way to write well under any deadline.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can this generate a full essay?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>This tool is designed to generate a prompt for creating a detailed essay outline, not a complete essay. The outline includes a thesis statement, topic sentences, suggested evidence, transitions, and a conclusion structure. You can then use this outline as a framework to write the full essay yourself or generate a follow-up prompt to expand each section. Starting with an outline ensures the final essay is well-organized and coherent.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What essay types are supported?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>The tool supports six major essay types: Argumentative (taking and defending a position), Expository (explaining a topic objectively), Persuasive (convincing the reader), Compare and Contrast (analyzing similarities and differences), Narrative (telling a story), and Analytical (examining and interpreting a subject). Each type produces a structurally different outline tailored to its specific conventions and requirements.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Is this suitable for college essays?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes. The tool includes an academic level selector that adjusts the complexity and depth of the outline. For undergraduate and graduate-level work, the generated prompt instructs the AI to include more sophisticated arguments, nuanced analysis, and suggestions for academic sources. However, always ensure that your final essay meets your institution's specific requirements and academic integrity policies.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const essayTopic = document.getElementById('essayTopic').value.trim();
+      const essayType = document.getElementById('essayType').value;
+      const academicLevel = document.getElementById('academicLevel').value;
+      const mainPoints = document.getElementById('mainPoints').value;
+      const counterArguments = document.getElementById('counterArguments').value;
+      const wordCount = document.getElementById('wordCount').value;
+
+      const lastSection = parseInt(mainPoints) + 1;
+      const bodyRange = 'II-' + (lastSection > 9 ? lastSection : lastSection);
+
+      let prompt = `You are an academic writing expert. Create a detailed ${essayType} essay outline on the topic: ${essayTopic}. The outline should be at a ${academicLevel} level with ${mainPoints} main supporting points.`;
+
+      if (counterArguments === 'Yes') {
+        prompt += ' Include counter-arguments and rebuttals for each main point.';
+      }
+
+      prompt += ` Target approximately ${wordCount}. Structure: I. Introduction (with hook, background context, and clear thesis statement), ${bodyRange}. Body Paragraphs (each with topic sentence, supporting evidence, analysis, and transition),`;
+
+      if (counterArguments === 'Yes') {
+        prompt += ' include counter-argument section,';
+      }
+
+      prompt += ' and Conclusion (restate thesis, summarize key points, broader implications). Include suggested sources or types of evidence for each section.';
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

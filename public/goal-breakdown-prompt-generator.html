@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Goal Breakdown Prompt Generator | AI Goal Planner</title>
+  <meta name="description" content="Generate AI prompts to break down goals into actionable steps. Our free goal breakdown generator creates structured plans with timelines.">
+  <meta name="keywords" content="goal breakdown prompt generator, AI goal planner, goal setting prompt, ChatGPT goal breakdown, action plan generator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/goal-breakdown-prompt-generator.html">
+  <meta property="og:title" content="Free Goal Breakdown Prompt Generator | AI Goal Planner">
+  <meta property="og:description" content="Generate AI prompts to break down goals into actionable steps. Our free goal breakdown generator creates structured plans with timelines.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/goal-breakdown-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link active">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Goal Breakdown</span> Prompt Generator</h1>
+          <p>Create AI prompts that transform big goals into actionable step-by-step plans with timelines.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Goal Breakdown Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to break down your goal into an actionable plan.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="goal">Your Goal <span class="required">*</span></label>
+              <textarea id="goal" name="goal" rows="3" required placeholder="e.g., Launch a successful online course and earn $10,000 in the first 3 months"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="timeframe">Timeframe</label>
+              <select id="timeframe" name="timeframe">
+                <option value="1 week">1 week</option>
+                <option value="1 month">1 month</option>
+                <option value="3 months">3 months</option>
+                <option value="6 months">6 months</option>
+                <option value="1 year">1 year</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="currentStatus">Current Status (optional)</label>
+              <textarea id="currentStatus" name="currentStatus" rows="3" placeholder="e.g., I have the topic expertise but no platform, audience, or content yet"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="availableHours">Available Hours per Week</label>
+              <select id="availableHours" name="availableHours">
+                <option value="5 hours">5 hours</option>
+                <option value="10 hours">10 hours</option>
+                <option value="20 hours">20 hours</option>
+                <option value="30 hours">30 hours</option>
+                <option value="40+ hours (full-time)">40+ hours (full-time)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="priorityLevel">Priority Level</label>
+              <select id="priorityLevel" name="priorityLevel">
+                <option value="Main focus">Main focus</option>
+                <option value="Side project alongside work">Side project alongside work</option>
+                <option value="One of several priorities">One of several priorities</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Goal setting is a science, and the most effective framework is the SMART method — goals that are Specific, Measurable, Achievable, Relevant, and Time-bound. Research consistently shows that people who write down specific goals are 42% more likely to achieve them than those who simply think about what they want. But setting the goal is only the first step — the real challenge is breaking it down into a plan you can actually follow day by day.</p>
+            <p>Breaking large goals into small, actionable steps is what separates dreamers from achievers. Psychologists call this "implementation intentions" — when you define exactly what you'll do, when you'll do it, and how, your follow-through rate increases dramatically. The problem is that most people struggle to create these detailed breakdowns on their own. AI serves as a powerful planning partner, helping you think through dependencies, estimate timelines, and identify obstacles you might not have anticipated.</p>
+            <p>AI can also serve as an ongoing accountability partner for your goals. Use the generated plan as a living document — revisit it weekly, update your progress, and ask the AI to adjust the plan based on what's working and what isn't. This iterative approach means your plan stays realistic and relevant rather than gathering dust like a traditional New Year's resolution. The combination of structured planning and regular review is what makes the difference between goals achieved and goals abandoned.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How does the goal breakdown work?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>You describe your goal and constraints — timeframe, available hours, and priority level — and the AI creates a structured plan with milestones, weekly tasks, and deadlines. The prompt is engineered to produce specific, actionable steps rather than vague advice, so you get a plan you can start following immediately.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can this work for any type of goal?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes — career, fitness, financial, creative, educational, or business goals. The more specific your goal, the better the plan. For example, "get healthier" will produce a generic plan, while "run a half marathon in under 2 hours by September" will generate a detailed, week-by-week training schedule with specific milestones.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What if my goal is unrealistic?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>The prompt asks the AI to evaluate feasibility and suggest adjusted targets if needed, so you get an honest assessment. If your goal doesn't fit the timeframe or available hours, the AI will flag this and propose a more realistic version while preserving the spirit of what you're trying to achieve. This saves you from planning for failure.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const goal = document.getElementById('goal').value.trim();
+      const timeframe = document.getElementById('timeframe').value;
+      const currentStatus = document.getElementById('currentStatus').value.trim();
+      const availableHours = document.getElementById('availableHours').value;
+      const priorityLevel = document.getElementById('priorityLevel').value;
+
+      let prompt = `You are an expert productivity coach and strategic planner. Break down this goal into a detailed, actionable plan: ${goal}. Timeframe: ${timeframe}. Available time: ${availableHours} per week. Priority: ${priorityLevel}.`;
+
+      if (currentStatus) {
+        prompt += ` Current status: ${currentStatus}.`;
+      }
+
+      prompt += ` Create a structured plan with: 1) Goal validation — is this realistic given the timeframe and available hours? If not, suggest an adjusted target, 2) Key milestones with specific deadlines, 3) Weekly action items broken into daily-sized tasks, 4) Resources or tools needed, 5) Potential obstacles and how to overcome them, 6) How to measure progress (specific KPIs), 7) Accountability strategy. Order tasks by priority and dependency. Be specific — not 'do marketing' but 'create 3 Instagram posts promoting the launch and schedule them for Mon/Wed/Fri'.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

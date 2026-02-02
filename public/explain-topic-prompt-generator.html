@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explain a Topic Prompt Generator | AI Explanation Builder</title>
+  <meta name="description" content="Generate AI prompts that explain any topic clearly. Our free explanation prompt generator creates prompts for simple, beginner-friendly explanations.">
+  <meta name="keywords" content="explain topic prompt generator, AI explanation prompt, ELI5 prompt generator, topic explanation">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/explain-topic-prompt-generator.html">
+  <meta property="og:title" content="Explain a Topic Prompt Generator | AI Explanation Builder">
+  <meta property="og:description" content="Generate AI prompts that explain any topic clearly. Our free explanation prompt generator creates prompts for simple, beginner-friendly explanations.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/explain-topic-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link active">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1><span class="accent">Explain a Topic</span> Prompt Generator</h1>
+          <p>Create AI prompts that break down any subject into clear, easy-to-understand explanations.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Explanation Prompt</h2>
+          <p class="subtitle">Enter a topic and your preferences, and we'll generate a prompt that produces a clear, tailored explanation.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="topic">Topic to Explain <span class="required">*</span></label>
+              <textarea id="topic" name="topic" rows="3" required placeholder="e.g., How does blockchain technology work?"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="complexity">Complexity Level</label>
+              <select id="complexity" name="complexity">
+                <option value="ELI5 (Explain Like I'm 5)">ELI5 (Explain Like I'm 5)</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="analogies">Use Analogies?</label>
+              <select id="analogies" name="analogies">
+                <option value="Yes">Yes - use real-world analogies</option>
+                <option value="No">No - stick to direct explanations</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="examples">Include Examples?</label>
+              <select id="examples" name="examples">
+                <option value="Yes">Yes - include practical examples</option>
+                <option value="No">No - keep it conceptual</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="outputFormat">Output Format</label>
+              <select id="outputFormat" name="outputFormat">
+                <option value="Paragraphs">Paragraphs</option>
+                <option value="Bullet Points">Bullet Points</option>
+                <option value="Step-by-Step Breakdown">Step-by-Step Breakdown</option>
+                <option value="Q&A Style">Q&A Style</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>AI has become one of the most powerful learning tools available today. Whether you're a student trying to grasp a difficult concept, a professional exploring a new field, or simply curious about how something works, AI can provide clear, personalized explanations on virtually any topic. The key to getting a great explanation is crafting the right prompt — and that's exactly what this tool helps you do.</p>
+            <p>The Feynman Technique, named after Nobel Prize-winning physicist Richard Feynman, is a learning method based on the idea that if you can't explain something simply, you don't truly understand it. This principle is at the heart of our tool: by asking AI to explain topics at various complexity levels, using analogies and examples, you can build a deep and intuitive understanding of any subject. The ELI5 option is particularly effective for breaking through the initial confusion around complex topics.</p>
+            <p>Clear explanations matter because they save time and reduce frustration. Instead of reading through dense textbooks or scouring multiple articles, you can get a well-structured, appropriately-leveled explanation in seconds. Whether you need a quick overview or a detailed breakdown, this prompt generator gives AI the right instructions to deliver exactly what you need for effective learning.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What does ELI5 mean?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>ELI5 stands for "Explain Like I'm 5." It's a popular internet term that means breaking down a complex topic into the simplest possible language, as if you were explaining it to a five-year-old. When you select this option, the generated prompt instructs the AI to use very simple words, everyday analogies, and short sentences to make even the most advanced topics accessible to anyone.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can this explain technical subjects?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Absolutely. This tool works for any subject — from quantum physics and machine learning to economics and philosophy. You can choose your complexity level to match your current understanding. For technical subjects, the "Intermediate" or "Advanced" options will preserve the necessary technical depth while still keeping the explanation organized and clear.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How is this different from the general prompt builder?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>The general prompt builder is a flexible, all-purpose tool for any type of AI prompt. This "Explain a Topic" generator is specifically optimized for learning and comprehension. It includes options tailored to educational needs — like complexity levels, analogies, examples, and output formats — and generates prompts that instruct the AI to act as a teacher, producing structured explanations designed to maximize understanding.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const topic = document.getElementById('topic').value.trim();
+      const complexity = document.getElementById('complexity').value;
+      const analogies = document.getElementById('analogies').value;
+      const examples = document.getElementById('examples').value;
+      const outputFormat = document.getElementById('outputFormat').value;
+
+      let prompt = `You are a gifted teacher who excels at making complex topics understandable. Explain ${topic} at a ${complexity} level.`;
+
+      if (analogies === 'Yes') {
+        prompt += ' Use real-world analogies to make abstract concepts relatable.';
+      }
+
+      if (examples === 'Yes') {
+        prompt += ' Include practical, concrete examples.';
+      }
+
+      prompt += ` Format the explanation as ${outputFormat}. Start with a one-sentence summary, then break the topic into digestible pieces. Avoid jargon unless explaining it. The goal is for the reader to walk away with a solid understanding of the topic.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

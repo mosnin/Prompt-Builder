@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Pricing Strategy Prompt Generator | AI Pricing Advisor</title>
+  <meta name="description" content="Generate AI prompts for optimal pricing strategies. Our free pricing prompt generator helps businesses set competitive, profitable prices.">
+  <meta name="keywords" content="pricing strategy prompt generator, AI pricing tool, pricing strategy builder, ChatGPT pricing prompt, pricing model generator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/pricing-strategy-prompt-generator.html">
+  <meta property="og:title" content="Free Pricing Strategy Prompt Generator | AI Pricing Advisor">
+  <meta property="og:description" content="Generate AI prompts for optimal pricing strategies. Our free pricing prompt generator helps businesses set competitive, profitable prices.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/pricing-strategy-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link active">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1><span class="accent">Pricing Strategy</span> Prompt Generator</h1>
+          <p>Create AI prompts that help you develop data-driven pricing strategies for any product or service.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Pricing Strategy Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to develop your optimal pricing strategy.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="productService">Product or Service <span class="required">*</span></label>
+              <input type="text" id="productService" name="productService" required placeholder="e.g., SaaS project management tool">
+            </div>
+            <div class="form-group">
+              <label for="briefDescription">Brief Description <span class="required">*</span></label>
+              <textarea id="briefDescription" name="briefDescription" rows="3" required placeholder="e.g., Cloud-based tool for teams of 5-50, includes task management, time tracking, and reporting"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="targetMarket">Target Market</label>
+              <select id="targetMarket" name="targetMarket">
+                <option value="Budget-Conscious">Budget-Conscious</option>
+                <option value="Mid-Range">Mid-Range</option>
+                <option value="Premium">Premium</option>
+                <option value="Luxury">Luxury</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="competitorPrice">Competitor Price Range</label>
+              <input type="text" id="competitorPrice" name="competitorPrice" placeholder="e.g., $10-$50/month">
+            </div>
+            <div class="form-group">
+              <label for="businessModel">Business Model</label>
+              <select id="businessModel" name="businessModel">
+                <option value="One-Time Purchase">One-Time Purchase</option>
+                <option value="Monthly Subscription">Monthly Subscription</option>
+                <option value="Annual Subscription">Annual Subscription</option>
+                <option value="Freemium">Freemium</option>
+                <option value="Tiered Pricing">Tiered Pricing</option>
+                <option value="Pay-Per-Use">Pay-Per-Use</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="primaryGoal">Primary Goal</label>
+              <select id="primaryGoal" name="primaryGoal">
+                <option value="Maximize Revenue">Maximize Revenue</option>
+                <option value="Market Penetration">Market Penetration</option>
+                <option value="Premium Positioning">Premium Positioning</option>
+                <option value="Competitive Matching">Competitive Matching</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Pricing psychology plays a crucial role in how customers perceive value. Research shows that consumers don't evaluate prices in a vacuum — they rely on anchoring, comparison, and emotional cues to determine whether something is worth buying. Techniques like charm pricing ($9.99 vs $10), decoy options that make your target tier look like the best deal, and bundling complementary products together can significantly influence purchasing decisions without changing the actual value of your offering.</p>
+            <p>Choosing the right pricing model is just as important as setting the right price point. Subscription models provide predictable recurring revenue but require ongoing value delivery. Freemium models can drive rapid adoption but need careful conversion optimization. Tiered pricing lets you capture different customer segments, while pay-per-use models lower the barrier to entry. The best model depends on your product, market, and long-term business strategy — and AI can help you evaluate the trade-offs.</p>
+            <p>Data-driven pricing decisions consistently outperform gut-feel pricing. Companies that use analytics and testing to optimize their pricing see 2-7% increases in revenue on average. This means tracking key metrics like conversion rates at different price points, customer lifetime value across tiers, churn rates, and willingness-to-pay data from surveys. Our pricing strategy prompt generator helps you build a framework for making these data-informed decisions from the start.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How do I know if my price is right?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Test with your market and measure the results. Track conversion rates at different price points, monitor churn rates, and conduct willingness-to-pay surveys. If your conversion rate is high but revenue is low, you may be underpriced. If conversions are very low, you may be overpriced or not communicating enough value. Adjust based on data, not assumptions.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Should I price higher or lower than competitors?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>It depends on your positioning strategy. Premium positioning with higher prices works if you deliver differentiated value, superior quality, or a better experience. Lower pricing can drive market penetration and volume, but competing on price alone is rarely sustainable. The key is to clearly communicate the value that justifies your price point relative to alternatives.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What is psychological pricing?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Psychological pricing uses techniques that influence how customers perceive value. Common strategies include charm pricing ($9.99 instead of $10), anchoring (showing a higher price first to make the actual price seem like a deal), decoy pricing (adding a less attractive option to push customers toward your preferred tier), and bundling (combining products to increase perceived value while raising average order value).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const productService = document.getElementById('productService').value.trim();
+      const description = document.getElementById('briefDescription').value.trim();
+      const targetMarket = document.getElementById('targetMarket').value;
+      const competitorPrice = document.getElementById('competitorPrice').value.trim();
+      const businessModel = document.getElementById('businessModel').value;
+      const primaryGoal = document.getElementById('primaryGoal').value;
+
+      let prompt = `You are a pricing strategist and business consultant. Develop a comprehensive pricing strategy for: ${productService}. Description: ${description}. Target market positioning: ${targetMarket}. Business model: ${businessModel}. Primary pricing goal: ${primaryGoal}.`;
+
+      if (competitorPrice) {
+        prompt += ` Competitor price range is ${competitorPrice}.`;
+      }
+
+      prompt += ` Provide: 1) Recommended price point(s) with justification, 2) Pricing model structure (tiers, features per tier if applicable), 3) Psychological pricing tactics to apply, 4) Launch pricing vs long-term pricing recommendation, 5) Discount/promotion strategy, 6) Key metrics to track. Consider perceived value, willingness to pay, cost-plus margins, and competitive positioning.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

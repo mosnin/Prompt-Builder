@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Resume Prompt Generator | AI Resume Builder Prompts</title>
+  <meta name="description" content="Generate optimized AI prompts to create professional resumes. Our free resume prompt builder helps you craft the perfect resume with ChatGPT.">
+  <meta name="keywords" content="resume prompt generator, AI resume builder, ChatGPT resume prompt, resume prompt">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/resume-prompt-generator.html">
+  <meta property="og:title" content="Free Resume Prompt Generator | AI Resume Builder Prompts">
+  <meta property="og:description" content="Generate optimized AI prompts to create professional resumes. Our free resume prompt builder helps you craft the perfect resume with ChatGPT.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/resume-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link active">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Resume Prompt Generator</span></h1>
+          <p>Create AI-powered prompts that help you build a standout resume tailored to any job.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Resume Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to create your perfect resume.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="jobTitle">Job Title Targeting <span class="required">*</span></label>
+              <input type="text" id="jobTitle" name="jobTitle" required placeholder="e.g., Senior Product Manager">
+            </div>
+            <div class="form-group">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry">
+                <option value="Technology">Technology</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Education">Education</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Retail">Retail</option>
+                <option value="Government">Government</option>
+                <option value="Non-profit">Non-profit</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="experienceLevel">Experience Level</label>
+              <select id="experienceLevel" name="experienceLevel">
+                <option value="Entry Level">Entry Level</option>
+                <option value="Mid-Level">Mid-Level</option>
+                <option value="Senior">Senior</option>
+                <option value="Executive/C-Suite">Executive/C-Suite</option>
+                <option value="Career Changer">Career Changer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="keySkills">Key Skills</label>
+              <textarea id="keySkills" name="keySkills" rows="3" placeholder="e.g., Project management, SQL, leadership, budgeting"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="yearsExperience">Years of Experience</label>
+              <select id="yearsExperience" name="yearsExperience">
+                <option value="0-1 years">0-1 years</option>
+                <option value="2-4 years">2-4 years</option>
+                <option value="5-9 years">5-9 years</option>
+                <option value="10-15 years">10-15 years</option>
+                <option value="15+ years">15+ years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="resumeStyle">Resume Style</label>
+              <select id="resumeStyle" name="resumeStyle">
+                <option value="Chronological">Chronological</option>
+                <option value="Functional">Functional</option>
+                <option value="Combination">Combination</option>
+                <option value="Modern/Creative">Modern/Creative</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="specialNotes">Special Notes (optional)</label>
+              <input type="text" id="specialNotes" name="specialNotes" placeholder="e.g., Career gap to explain, switching industries">
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Writing a resume that stands out in today's competitive job market can be a daunting challenge. AI-powered tools like ChatGPT and Claude have changed the game by enabling job seekers to generate polished, professional resumes in minutes. With the right prompt, you can get an AI to tailor your resume specifically to a job description, highlight your strongest qualifications, and use industry-specific language that catches the eye of both hiring managers and automated screening systems.</p>
+            <p>One of the most important aspects of a modern resume is ATS (Applicant Tracking System) optimization. Over 90% of large companies use ATS software to filter resumes before a human ever sees them. This means your resume needs to include the right keywords, formatting, and structure to pass these digital gatekeepers. Our resume prompt generator is designed to instruct AI to incorporate ATS-friendly language and formatting into every resume it creates.</p>
+            <p>Tailoring your resume to each specific job posting is no longer optional — it's essential. Generic resumes get overlooked, while customized ones demonstrate genuine interest and relevance. By using this tool to generate a targeted prompt for each application, you ensure that your resume speaks directly to the requirements of the role, increasing your chances of landing an interview significantly.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How does the resume prompt generator work?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Our resume prompt generator takes your job details, skills, and experience level and assembles an optimized prompt that you paste into any AI chatbot like ChatGPT, Claude, or Gemini. The AI then uses that detailed prompt to create a professional, tailored resume for you. The better the prompt, the better the output — and that's exactly what this tool helps you build.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Will the AI-generated resume pass ATS screening?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, our prompts are specifically designed to instruct the AI to use ATS-friendly formatting, relevant keywords, and proper section headings. The generated resume will include action verbs, quantified achievements, and industry-specific terminology that ATS systems look for. However, we always recommend reviewing the final output and adjusting it to match the exact keywords from the job posting you're applying to.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can I use this for any job level?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Absolutely. The generator supports all experience levels from entry-level positions to executive and C-suite roles. It also works well for career changers who need to reframe their experience for a new industry. Simply select your experience level and the AI will adjust the tone, structure, and emphasis of the resume accordingly.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const jobTitle = document.getElementById('jobTitle').value.trim();
+      const industry = document.getElementById('industry').value;
+      const experienceLevel = document.getElementById('experienceLevel').value;
+      const keySkills = document.getElementById('keySkills').value.trim();
+      const yearsExperience = document.getElementById('yearsExperience').value;
+      const resumeStyle = document.getElementById('resumeStyle').value;
+      const specialNotes = document.getElementById('specialNotes').value.trim();
+
+      let prompt = `You are an expert resume writer and career coach. Write a professional ${resumeStyle} resume for a ${experienceLevel} ${jobTitle} role in the ${industry} industry. The candidate has ${yearsExperience} of experience`;
+
+      if (keySkills) {
+        prompt += ` with key skills in: ${keySkills}.`;
+      } else {
+        prompt += '.';
+      }
+
+      if (specialNotes) {
+        prompt += ` Additional context: ${specialNotes}.`;
+      }
+
+      prompt += ` Format the resume with clear sections: Contact Info, Professional Summary, Work Experience (with quantified achievements), Skills, and Education. Use strong action verbs and include metrics where possible. Tailor the language and keywords to pass ATS (Applicant Tracking System) screening.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

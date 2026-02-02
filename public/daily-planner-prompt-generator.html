@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Daily Planner Prompt Generator | AI Schedule Builder</title>
+  <meta name="description" content="Generate AI prompts to create optimized daily productivity plans. Our free daily planner generator builds structured schedules for any workday.">
+  <meta name="keywords" content="daily planner prompt generator, AI schedule builder, daily schedule prompt, ChatGPT planner, productivity planner prompt">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/daily-planner-prompt-generator.html">
+  <meta property="og:title" content="Free Daily Planner Prompt Generator | AI Schedule Builder">
+  <meta property="og:description" content="Generate AI prompts to create optimized daily productivity plans. Our free daily planner generator builds structured schedules for any workday.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/daily-planner-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link active">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Daily Planner</span> Prompt Generator</h1>
+          <p>Create AI prompts that build optimized daily schedules tailored to your tasks and energy patterns.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Daily Planner Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to create your optimized daily schedule.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="tasks">Tasks and Responsibilities <span class="required">*</span></label>
+              <textarea id="tasks" name="tasks" rows="3" required placeholder="e.g., Write quarterly report, 3 client calls, review team pull requests, prepare presentation, respond to emails"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="availableHours">Available Hours Today</label>
+              <select id="availableHours" name="availableHours">
+                <option value="4 hours">4 hours</option>
+                <option value="6 hours">6 hours</option>
+                <option value="8 hours" selected>8 hours</option>
+                <option value="10 hours">10 hours</option>
+                <option value="12+ hours">12+ hours</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="energyPattern">Energy Pattern</label>
+              <select id="energyPattern" name="energyPattern">
+                <option value="Morning person (peak energy AM)">Morning person (peak energy AM)</option>
+                <option value="Night owl (peak energy PM)">Night owl (peak energy PM)</option>
+                <option value="Steady throughout the day">Steady throughout the day</option>
+                <option value="Post-lunch dip">Post-lunch dip</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="includeBreaks">Include Breaks?</label>
+              <select id="includeBreaks" name="includeBreaks">
+                <option value="Yes - with break suggestions">Yes - with break suggestions</option>
+                <option value="No - just tasks">No - just tasks</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="planningMethod">Planning Method</label>
+              <select id="planningMethod" name="planningMethod">
+                <option value="Time blocking">Time blocking</option>
+                <option value="Pomodoro technique">Pomodoro technique</option>
+                <option value="Eisenhower matrix (urgent/important)">Eisenhower matrix (urgent/important)</option>
+                <option value="Eat the frog (hardest first)">Eat the frog (hardest first)</option>
+                <option value="Flexible priority list">Flexible priority list</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Time management is one of the most studied areas of productivity science, and the evidence is clear: people who plan their day in advance are up to 25% more productive than those who don't. The simple act of writing down your tasks and scheduling them into time blocks forces you to make conscious decisions about priorities rather than reacting to whatever feels most urgent in the moment.</p>
+            <p>One of the most overlooked factors in daily planning is energy management. Not all hours are created equal — most people have 2-4 hours of peak cognitive performance per day, and scheduling your most important, focus-intensive work during these hours can dramatically improve output quality. Whether you're a morning person who hits peak focus at 9 AM or a night owl who does their best work after dinner, aligning your schedule with your natural energy rhythms is a productivity multiplier.</p>
+            <p>AI can help optimize your daily schedule in ways that are difficult to do manually. It can analyze task dependencies, estimate time requirements, batch similar activities together, and ensure buffer time between meetings. By providing the AI with your tasks, available hours, and energy pattern, you get a personalized schedule that maximizes your productive output while building in the breaks and transitions your brain needs to sustain focus throughout the day.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What planning method should I choose?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Time blocking works best for structured days with a mix of meetings and focus work. Pomodoro technique is ideal for focus-intensive work that requires sustained concentration. Eat the frog is great if you tend to procrastinate on important tasks — it puts the hardest item first. Eisenhower matrix helps when you have too many tasks and need to ruthlessly prioritize. Flexible priority list works well for unpredictable days.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can this handle both work and personal tasks?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes. Include all tasks in the input — work deliverables, personal errands, exercise, meals, and anything else on your plate — and the AI will organize everything into a balanced schedule. This holistic approach ensures you're not overcommitting to work at the expense of personal priorities or vice versa.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How do I handle unexpected interruptions?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>The prompt includes buffer time between tasks specifically to absorb unexpected interruptions. If your day gets significantly derailed, rebuild your plan mid-day by running the generator again with your remaining tasks and hours. The key is flexibility — a plan is a guide, not a contract. The best daily planners adapt to reality while keeping priorities clear.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const tasks = document.getElementById('tasks').value.trim();
+      const availableHours = document.getElementById('availableHours').value;
+      const energyPattern = document.getElementById('energyPattern').value;
+      const includeBreaks = document.getElementById('includeBreaks').value;
+      const planningMethod = document.getElementById('planningMethod').value;
+
+      let prompt = `You are a productivity expert and time management coach. Create an optimized daily schedule for someone with ${availableHours} available hours today. Energy pattern: ${energyPattern}. Planning method: ${planningMethod}. Tasks to complete: ${tasks}.`;
+
+      if (includeBreaks === 'Yes - with break suggestions') {
+        prompt += ` Schedule regular breaks including specific suggestions for recharging (short walk, stretching, hydration).`;
+      }
+
+      prompt += ` Structure the day to: 1) Match high-priority/high-focus tasks to peak energy periods, 2) Batch similar tasks together, 3) Include buffer time between meetings or focus blocks, 4) Prioritize tasks by impact and urgency. Present the schedule as a clear time-blocked table from start to finish. Add a 'Top 3 must-complete' list at the top. If all tasks can't fit, flag which ones to defer and suggest when to reschedule them.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

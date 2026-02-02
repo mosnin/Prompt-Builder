@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Email Marketing Prompt Generator | AI Email Builder</title>
+  <meta name="description" content="Generate AI prompts for high-converting marketing emails. Create promotional, welcome, and follow-up emails with our free email prompt generator.">
+  <meta name="keywords" content="email marketing prompt generator, AI email writer, ChatGPT email prompt, email campaign prompt, promotional email prompt">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/email-marketing-prompt-generator.html">
+  <meta property="og:title" content="Free Email Marketing Prompt Generator | AI Email Builder">
+  <meta property="og:description" content="Generate AI prompts for high-converting marketing emails. Create promotional, welcome, and follow-up emails with our free email prompt generator.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/email-marketing-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link active">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Email Marketing</span> Prompt Generator</h1>
+          <p>Create AI prompts that generate high-converting marketing emails for any campaign.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Email Marketing Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to create your perfect marketing email.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="productService">Product or Service <span class="required">*</span></label>
+              <input type="text" id="productService" name="productService" required placeholder="e.g., Online fitness coaching program">
+            </div>
+            <div class="form-group">
+              <label for="targetAudience">Target Audience <span class="required">*</span></label>
+              <input type="text" id="targetAudience" name="targetAudience" required placeholder="e.g., Busy professionals aged 25-40">
+            </div>
+            <div class="form-group">
+              <label for="emailType">Email Type</label>
+              <select id="emailType" name="emailType">
+                <option value="Promotional/Sales">Promotional/Sales</option>
+                <option value="Welcome/Onboarding">Welcome/Onboarding</option>
+                <option value="Follow-Up">Follow-Up</option>
+                <option value="Abandoned Cart">Abandoned Cart</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="Re-engagement">Re-engagement</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="callToAction">Call-to-Action</label>
+              <input type="text" id="callToAction" name="callToAction" placeholder="e.g., Start your free trial, Shop now, Book a call">
+            </div>
+            <div class="form-group">
+              <label for="urgencyLevel">Urgency Level</label>
+              <select id="urgencyLevel" name="urgencyLevel">
+                <option value="Low - no urgency">Low - no urgency</option>
+                <option value="Medium - soft deadline">Medium - soft deadline</option>
+                <option value="High - limited time offer">High - limited time offer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tone">Tone</label>
+              <select id="tone" name="tone">
+                <option value="Professional">Professional</option>
+                <option value="Friendly & Warm">Friendly &amp; Warm</option>
+                <option value="Urgent & Persuasive">Urgent &amp; Persuasive</option>
+                <option value="Casual & Relatable">Casual &amp; Relatable</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Email marketing consistently delivers the highest ROI of any digital marketing channel, averaging $36 for every $1 spent. Yet many businesses struggle to write emails that actually get opened and drive conversions. The subject line alone determines whether your email gets read or sent straight to the trash — studies show that 47% of recipients decide to open an email based solely on the subject line. AI-powered email writing tools help you craft subject lines and body copy that are optimized for engagement and action.</p>
+            <p>A/B testing is one of the most powerful tools in an email marketer's arsenal, and AI makes it easier than ever. By generating multiple variations of subject lines, preview text, and email body copy, you can systematically test what resonates with your audience. Even small improvements in open rates and click-through rates compound over time, leading to significantly more revenue from your email list.</p>
+            <p>Personalized emails outperform generic ones by a wide margin. Emails with personalized subject lines are 26% more likely to be opened, and segmented campaigns drive 760% more revenue than one-size-fits-all blasts. Our email marketing prompt generator helps you create emails that speak directly to your target audience's pain points, desires, and motivations — making every subscriber feel like you wrote the email just for them.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What email type converts best?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>It depends on your goal. Welcome emails have the highest open rates (often 50-80%), making them ideal for relationship building. Abandoned cart emails drive direct revenue with recovery rates of 5-10%. Promotional emails work best for time-sensitive offers, while newsletters build long-term engagement and trust with your audience.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How long should a marketing email be?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>50-125 words for promotional emails, 150-300 words for newsletters. Shorter emails typically have higher click rates because they respect the reader's time and focus attention on a single call to action. However, the ideal length depends on your audience and the complexity of your offer — test different lengths to find what works best.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What makes a good subject line?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>The best subject lines use personalization, curiosity, urgency, or a clear benefit to compel opens. Keep it under 50 characters for mobile optimization. Avoid spam trigger words like "free" or "act now" in all caps. Testing emoji usage, questions, and power words can significantly improve your open rates over time.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const productService = document.getElementById('productService').value.trim();
+      const targetAudience = document.getElementById('targetAudience').value.trim();
+      const emailType = document.getElementById('emailType').value;
+      const callToAction = document.getElementById('callToAction').value.trim();
+      const urgencyLevel = document.getElementById('urgencyLevel').value;
+      const tone = document.getElementById('tone').value;
+
+      let prompt = `You are an email marketing expert who writes high-converting campaigns. Write a ${emailType} email for ${productService} targeting ${targetAudience}. Tone: ${tone}.`;
+
+      if (callToAction) {
+        prompt += ` The primary call-to-action is: '${callToAction}'.`;
+      }
+
+      if (urgencyLevel.startsWith('Low')) {
+        prompt += ` Focus on value and benefits rather than urgency.`;
+      } else if (urgencyLevel.startsWith('Medium')) {
+        prompt += ` Mention a soft deadline or limited availability to encourage action.`;
+      } else {
+        prompt += ` Create strong urgency with a specific deadline or scarcity element.`;
+      }
+
+      prompt += ` Structure: attention-grabbing subject line (+ 1 alternative), preview text, compelling opening that addresses the reader's pain point, value proposition with benefits (not features), social proof or credibility marker, clear CTA button text, and a P.S. line. Keep paragraphs short (1-2 sentences). Write for scanners — use bold text for key phrases.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

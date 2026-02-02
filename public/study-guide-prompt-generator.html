@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Study Guide Prompt Generator | AI Study Helper</title>
+  <meta name="description" content="Generate AI prompts to create comprehensive study guides. Our free study guide generator helps students prepare for exams with structured notes.">
+  <meta name="keywords" content="study guide prompt generator, AI study guide, exam prep prompt, ChatGPT study guide">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/study-guide-prompt-generator.html">
+  <meta property="og:title" content="Free Study Guide Prompt Generator | AI Study Helper">
+  <meta property="og:description" content="Generate AI prompts to create comprehensive study guides. Our free study guide generator helps students prepare for exams with structured notes.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/study-guide-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link active">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Study Guide</span> Prompt Generator</h1>
+          <p>Create AI prompts that generate comprehensive study guides for any subject or exam.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Study Guide Prompt</h2>
+          <p class="subtitle">Enter your subject and topics, and we'll generate a prompt that produces a comprehensive study guide.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="subject">Subject / Course <span class="required">*</span></label>
+              <input type="text" id="subject" name="subject" required placeholder="e.g., AP Biology, Introduction to Psychology">
+            </div>
+            <div class="form-group">
+              <label for="topics">Specific Topics to Cover <span class="required">*</span></label>
+              <textarea id="topics" name="topics" rows="3" required placeholder="e.g., Cell division, mitosis vs meiosis, DNA replication"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="difficulty">Difficulty Level</label>
+              <select id="difficulty" name="difficulty">
+                <option value="Introductory">Introductory</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced/AP">Advanced/AP</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="practiceQuestions">Include Practice Questions?</label>
+              <select id="practiceQuestions" name="practiceQuestions">
+                <option value="Yes - with answers">Yes - with answers</option>
+                <option value="Yes - without answers">Yes - without answers</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="definitions">Include Definitions?</label>
+              <select id="definitions" name="definitions">
+                <option value="Yes">Yes - key terms glossary</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="format">Format</label>
+              <select id="format" name="format">
+                <option value="Outline with Key Points">Outline with Key Points</option>
+                <option value="Flashcard-Style Q&A">Flashcard-Style Q&A</option>
+                <option value="Detailed Notes">Detailed Notes</option>
+                <option value="Mind Map / Concept Map">Mind Map / Concept Map</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Effective studying is not about spending more time — it's about studying smarter. Research in cognitive science consistently shows that techniques like active recall, spaced repetition, and elaborative interrogation dramatically outperform passive reading and highlighting. A well-structured study guide incorporates these principles by organizing information in a way that promotes understanding and long-term retention rather than simple memorization.</p>
+            <p>AI-generated study guides are a powerful complement to traditional learning materials. They can quickly distill key concepts from an entire course into a focused, organized format that's ideal for exam preparation. Whether you prefer outlines, flashcards, or detailed notes, AI can tailor the guide to your preferred learning style. The key is providing specific topics and the right level of detail — which is exactly what our prompt generator helps you do.</p>
+            <p>To get the most out of an AI-generated study guide, treat it as a starting point rather than a final resource. Use it to identify the key concepts and their relationships, then test yourself actively — close the guide and try to recall the information from memory. Combine the study guide with practice questions (which you can include in the prompt) to simulate exam conditions. This active approach to studying with AI-generated materials is far more effective than passively reading through notes.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can AI replace a textbook?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>AI-generated study guides are best used as a supplement to your textbook and class notes, not a replacement. They excel at summarizing key concepts, organizing information for review, and generating practice questions. However, textbooks provide primary source material, detailed examples, and depth that AI summaries may not fully capture. Use AI study guides to consolidate your understanding and identify areas where you need to review your textbook more carefully.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What subjects work best?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>This tool works well for virtually any academic subject — from sciences like biology, chemistry, and physics to humanities like history, literature, and philosophy. It's also effective for professional certifications, standardized test prep (SAT, GRE, LSAT), and technical subjects like programming and data science. The more specific you are about the topics to cover, the more targeted and useful the study guide will be.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How should I use the generated study guide?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>For maximum effectiveness, use the study guide actively rather than passively. Read through each section, then close the guide and try to recall the key points from memory. Use the practice questions to test yourself under exam-like conditions. Revisit topics you struggled with and create additional prompts for deeper explanations on those areas. Spacing your study sessions over multiple days and mixing up topics (interleaving) will further boost your retention.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const subject = document.getElementById('subject').value.trim();
+      const topics = document.getElementById('topics').value.trim();
+      const difficulty = document.getElementById('difficulty').value;
+      const practiceQuestions = document.getElementById('practiceQuestions').value;
+      const definitions = document.getElementById('definitions').value;
+      const format = document.getElementById('format').value;
+
+      let prompt = `You are an experienced educator and study skills expert. Create a comprehensive study guide for ${subject} covering these topics: ${topics}. Difficulty level: ${difficulty}. Format: ${format}.`;
+
+      if (definitions === 'Yes') {
+        prompt += ' Include a glossary of key terms and definitions.';
+      }
+
+      if (practiceQuestions === 'Yes - with answers') {
+        prompt += ' End with practice questions and a separate answer key.';
+      } else if (practiceQuestions === 'Yes - without answers') {
+        prompt += ' End with practice questions for self-testing.';
+      }
+
+      prompt += ' For each topic: summarize the key concepts clearly, highlight important facts, explain relationships between concepts, and use mnemonics or memory aids where helpful. Organize information from foundational concepts to more complex ideas.';
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

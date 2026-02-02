@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Blog Post Prompt Generator | AI Blog Writing Prompts</title>
+  <meta name="description" content="Generate optimized AI prompts for writing SEO-friendly blog posts. Our free blog post prompt generator helps you create engaging, well-structured articles.">
+  <meta name="keywords" content="blog post prompt generator, AI blog writer, ChatGPT blog prompt, blog writing prompt, SEO blog prompt">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/blog-post-prompt-generator.html">
+  <meta property="og:title" content="Free Blog Post Prompt Generator | AI Blog Writing Prompts">
+  <meta property="og:description" content="Generate optimized AI prompts for writing SEO-friendly blog posts. Our free blog post prompt generator helps you create engaging, well-structured articles.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/blog-post-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link active">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1>Free <span class="accent">Blog Post Prompt Generator</span></h1>
+          <p>Create AI prompts that produce SEO-optimized, engaging blog posts on any topic.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Blog Post Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to create your perfect blog post.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="blogTopic">Blog Topic <span class="required">*</span></label>
+              <textarea id="blogTopic" name="blogTopic" rows="3" required placeholder="e.g., 10 best productivity apps for remote workers in 2026"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="targetKeyword">Target Keyword</label>
+              <input type="text" id="targetKeyword" name="targetKeyword" placeholder="e.g., best productivity apps">
+            </div>
+            <div class="form-group">
+              <label for="wordCount">Word Count Target</label>
+              <select id="wordCount" name="wordCount">
+                <option value="~500 words">~500 words</option>
+                <option value="~1000 words">~1000 words</option>
+                <option value="~1500 words">~1500 words</option>
+                <option value="~2000 words">~2000 words</option>
+                <option value="2500+ words">2500+ words</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tone">Tone</label>
+              <select id="tone" name="tone">
+                <option value="Professional">Professional</option>
+                <option value="Casual & Conversational">Casual &amp; Conversational</option>
+                <option value="Authoritative">Authoritative</option>
+                <option value="Witty & Fun">Witty &amp; Fun</option>
+                <option value="Educational">Educational</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="includeFaq">Include FAQ Section?</label>
+              <select id="includeFaq" name="includeFaq">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="includeMeta">Include Meta Description?</label>
+              <select id="includeMeta" name="includeMeta">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>AI has become an indispensable tool for bloggers looking to create better content faster. Whether you're a solo creator managing multiple topics or a content team scaling output, AI-powered prompts can help you overcome writer's block, generate structured outlines, and draft complete articles in a fraction of the time it would take manually. The key is crafting the right prompt — one that gives the AI enough context about your topic, audience, and goals to produce genuinely useful content.</p>
+            <p>SEO structure is critical for blog posts that need to rank in search engines. This means using a clear heading hierarchy (H1, H2, H3), incorporating target keywords naturally throughout the content, writing scannable paragraphs, and including internal and external links. A well-structured blog post not only performs better in search results but also keeps readers engaged longer, reducing bounce rates and increasing the chances of conversions.</p>
+            <p>While AI can produce impressive drafts, the best blog content always includes a human touch. After generating your initial draft, take the time to add personal anecdotes, unique insights from your experience, and a voice that reflects your brand. Edit for accuracy, update any outdated information, and ensure every claim is backed by credible sources. This combination of AI efficiency and human authenticity is what separates good blog content from great blog content.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>Can AI write an entire blog post?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, but you should always edit and add your personal voice, expertise, and unique insights. AI-generated drafts provide an excellent starting point, but the best-performing blog posts combine AI efficiency with human creativity, fact-checking, and authentic storytelling that resonates with your audience.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How do I optimize a blog post for SEO?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Include target keywords naturally, use heading hierarchy (H1, H2, H3), add internal and external links, optimize images with alt text, and write a compelling meta description under 160 characters. Our prompt generator instructs the AI to follow these SEO best practices automatically, giving you a strong foundation to build upon.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What makes a blog post engaging?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Strong hook in the introduction, clear structure with descriptive subheadings, scannable formatting with bullet points and short paragraphs, practical value that solves a reader's problem, and a conversational tone that connects with your audience. Including visuals, real examples, and a clear call to action at the end also significantly boosts engagement.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const topic = document.getElementById('blogTopic').value.trim();
+      const keyword = document.getElementById('targetKeyword').value.trim();
+      const wordCount = document.getElementById('wordCount').value;
+      const tone = document.getElementById('tone').value;
+      const includeFaq = document.getElementById('includeFaq').value;
+      const includeMeta = document.getElementById('includeMeta').value;
+
+      let prompt = `You are an expert SEO content writer and blogger. Write a comprehensive, long-form blog post about: ${topic}.`;
+
+      if (keyword) {
+        prompt += ` Naturally incorporate the target keyword '${keyword}' in the title, headings, introduction, and throughout the content.`;
+      }
+
+      prompt += ` Target approximately ${wordCount}. Use a ${tone} tone. Structure: compelling title (H1), engaging introduction with a hook, multiple H2/H3 subheadings, short scannable paragraphs, bullet points where appropriate, and a strong conclusion with a call to action.`;
+
+      if (includeFaq === 'Yes') {
+        prompt += ` Include a FAQ section with 4-5 common questions and answers at the end.`;
+      }
+
+      if (includeMeta === 'Yes') {
+        prompt += ` Also provide an SEO meta description under 160 characters.`;
+      }
+
+      prompt += ` Use transition words, vary sentence length, and ensure the content provides genuine value to readers.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>

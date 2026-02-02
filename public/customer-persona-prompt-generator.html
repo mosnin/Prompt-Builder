@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Customer Persona Prompt Generator | AI Persona Builder</title>
+  <meta name="description" content="Generate AI prompts to create detailed customer personas. Our free persona generator helps businesses understand their ideal customers.">
+  <meta name="keywords" content="customer persona prompt generator, AI persona builder, buyer persona prompt, ChatGPT persona generator, target audience prompt">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prompt-builder.vercel.app/customer-persona-prompt-generator.html">
+  <meta property="og:title" content="Free Customer Persona Prompt Generator | AI Persona Builder">
+  <meta property="og:description" content="Generate AI prompts to create detailed customer personas. Our free persona generator helps businesses understand their ideal customers.">
+  <meta property="og:url" content="https://prompt-builder.vercel.app/customer-persona-prompt-generator.html">
+  <meta property="og:site_name" content="AI Prompt Generator">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="/" class="logo">
+        <div class="logo-icon" aria-hidden="true">&#9889;</div>
+        <span>PromptBuilder</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="#generator">Generator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="sidebar-home">General Prompt Builder</a>
+      <div class="sidebar-heading">Career</div>
+      <a href="/resume-prompt-generator.html" class="sidebar-link">Resume Prompt Builder</a>
+      <a href="/cover-letter-prompt-generator.html" class="sidebar-link">Cover Letter Builder</a>
+      <div class="sidebar-heading">Education</div>
+      <a href="/explain-topic-prompt-generator.html" class="sidebar-link">Explain a Topic</a>
+      <a href="/essay-outline-prompt-generator.html" class="sidebar-link">Essay Outline</a>
+      <a href="/study-guide-prompt-generator.html" class="sidebar-link">Study Guide</a>
+      <div class="sidebar-heading">Content</div>
+      <a href="/blog-post-prompt-generator.html" class="sidebar-link">Blog Post</a>
+      <a href="/social-media-prompt-generator.html" class="sidebar-link">Social Media Caption</a>
+      <a href="/email-marketing-prompt-generator.html" class="sidebar-link">Email Marketing</a>
+      <div class="sidebar-heading">Business</div>
+      <a href="/business-idea-prompt-generator.html" class="sidebar-link">Business Idea</a>
+      <a href="/pricing-strategy-prompt-generator.html" class="sidebar-link">Pricing Strategy</a>
+      <a href="/customer-persona-prompt-generator.html" class="sidebar-link active">Customer Persona</a>
+      <div class="sidebar-heading">Productivity</div>
+      <a href="/goal-breakdown-prompt-generator.html" class="sidebar-link">Goal Breakdown</a>
+      <a href="/daily-planner-prompt-generator.html" class="sidebar-link">Daily Planner</a>
+      <a href="/habit-builder-prompt-generator.html" class="sidebar-link">Habit Builder</a>
+    </aside>
+
+    <div class="main-content">
+      <section class="hero">
+        <div class="container">
+          <h1><span class="accent">Customer Persona</span> Prompt Generator</h1>
+          <p>Create AI prompts that build detailed, data-driven customer personas for your business.</p>
+        </div>
+      </section>
+
+      <main>
+        <section class="tool-section" id="generator">
+          <h2>Build Your Customer Persona Prompt</h2>
+          <p class="subtitle">Fill in the details below and we'll generate a tailored AI prompt to create detailed customer personas.</p>
+          <form id="promptForm" autocomplete="off">
+            <div class="form-group">
+              <label for="businessType">Business Type / Industry <span class="required">*</span></label>
+              <input type="text" id="businessType" name="businessType" required placeholder="e.g., B2B SaaS, e-commerce fashion, local restaurant">
+            </div>
+            <div class="form-group">
+              <label for="productService">Product or Service <span class="required">*</span></label>
+              <input type="text" id="productService" name="productService" required placeholder="e.g., Project management software for small teams">
+            </div>
+            <div class="form-group">
+              <label for="targetAudience">Target Audience Description <span class="required">*</span></label>
+              <textarea id="targetAudience" name="targetAudience" rows="3" required placeholder="e.g., Small business owners who struggle with team coordination"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="detailLevel">Level of Detail</label>
+              <select id="detailLevel" name="detailLevel">
+                <option value="Basic overview">Basic overview</option>
+                <option value="Detailed persona">Detailed persona</option>
+                <option value="Comprehensive deep-dive">Comprehensive deep-dive</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="buyingBehavior">Include Buying Behavior?</label>
+              <select id="buyingBehavior" name="buyingBehavior">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="numPersonas">Number of Personas</label>
+              <select id="numPersonas" name="numPersonas">
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-generate">&#9889; Generate Prompt</button>
+          </form>
+          <div class="output-area" id="outputArea">
+            <div class="output-header">
+              <h3>Your Generated Prompt</h3>
+              <button class="btn-copy" id="copyBtn" type="button">Copy to Clipboard</button>
+            </div>
+            <div class="output-box" id="outputBox"></div>
+            <p class="output-hint">Paste this prompt directly into ChatGPT, Claude, Gemini, or any AI chatbot.</p>
+          </div>
+        </section>
+
+        <section class="mini-article">
+          <div class="container">
+            <p>Understanding your customers is the foundation of effective marketing, and customer personas are one of the most powerful tools for achieving that understanding. A well-crafted persona goes beyond basic demographics — it captures motivations, frustrations, decision-making patterns, and the language your ideal customers actually use. With AI, you can accelerate the persona creation process dramatically, generating detailed profiles in minutes that would traditionally take weeks of research to compile.</p>
+            <p>AI-powered persona generation works best when combined with real data. Use the prompts generated by this tool as a starting point, then validate and refine the output with insights from your CRM, customer interviews, support tickets, and analytics data. The AI can identify patterns and suggest persona attributes you might not have considered, while your real-world data ensures the personas accurately reflect your actual customer base rather than assumptions.</p>
+            <p>The key to actionable personas is specificity. Vague personas like "busy professionals" don't help your marketing team make decisions. Detailed personas with names, daily routines, specific pain points, and buying triggers give your team a concrete person to design for. This tool's prompts are engineered to push AI toward that level of specificity, ensuring you get personas that actually drive better marketing decisions and product development.</p>
+          </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+          <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>What is a customer persona?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>A customer persona is a semi-fictional representation of your ideal customer based on market research and real data about your existing customers. It includes demographics, behavior patterns, motivations, goals, and pain points. Personas help businesses make more informed decisions about product development, marketing strategies, and customer service by giving teams a clear picture of who they're serving.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How many personas do I need?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Most businesses benefit from 2-4 personas. Too many dilutes your marketing focus and makes it difficult to create targeted campaigns. Start with your primary customer segment, then add additional personas only if they represent meaningfully different buying behaviors or needs. Each persona should drive distinct marketing strategies — if two personas would receive the same messaging, they should be combined into one.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <span>How do I validate my persona?</span>
+                <span class="arrow">&#9660;</span>
+              </div>
+              <div class="faq-answer">
+                <p>Interview real customers, analyze your CRM data, run surveys, and check if your marketing resonates better when targeted to the persona. Compare the AI-generated persona against your actual customer data — look at purchase history, support interactions, and engagement metrics. If the persona doesn't match reality, refine it. The best personas are living documents that evolve as you gather more customer insights.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#generator">Generator</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p>&copy; 2026 PromptBuilder &mdash; Free AI Prompt Generator. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/js/shared.js"></script>
+  <script>
+    function buildPrompt() {
+      const businessType = document.getElementById('businessType').value.trim();
+      const productService = document.getElementById('productService').value.trim();
+      const targetAudience = document.getElementById('targetAudience').value.trim();
+      const detailLevel = document.getElementById('detailLevel').value;
+      const buyingBehavior = document.getElementById('buyingBehavior').value;
+      const numPersonas = document.getElementById('numPersonas').value;
+
+      let prompt = `You are a marketing research expert specializing in customer segmentation and buyer personas. Create ${numPersonas} detailed customer persona(s) for a ${businessType} business selling ${productService}. Target audience: ${targetAudience}. Detail level: ${detailLevel}. For each persona include: 1) Fictional name, age, job title, and location, 2) Demographics (income, education, family status), 3) Goals and motivations, 4) Pain points and frustrations, 5) How they discover products (channels), 6) Decision-making factors, 7) Objections to buying.`;
+
+      if (buyingBehavior === 'Yes') {
+        prompt += ` Also include: purchase frequency, budget range, preferred payment methods, brand loyalty patterns, and what triggers a purchase decision.`;
+      }
+
+      if (detailLevel === 'Comprehensive deep-dive') {
+        prompt += ` Add psychographics, daily routine, media consumption habits, and a 'day in the life' narrative.`;
+      }
+
+      prompt += ` Make the personas realistic and actionable for marketing strategy.`;
+
+      return prompt;
+    }
+    initPromptForm('promptForm', buildPrompt);
+  </script>
+</body>
+</html>
